@@ -4,10 +4,6 @@ import scrape_mars
 
 app = Flask(__name__)
 
-#Use flask_pymongo to set up mongo connection
-app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
-mongo = PyMongo(app)
-
 # Or set inline
 mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 
@@ -24,7 +20,7 @@ def index():
 # set our path to /scrape
 @app.route("/scrape")
 def scraper():
-    # call the scrape function in our scrape_phone file. This will scrape and save to mongo.
+    # call the scrape function in our scrape_mars file. This will scrape and save to mongo.
     listings_data = scrape_mars.scrape()
     # update our listings with the data that is being scraped or create&insert if collection doesn't exist
     listings_collection.update_one({}, {"$set": listings_data}, upsert=True)
