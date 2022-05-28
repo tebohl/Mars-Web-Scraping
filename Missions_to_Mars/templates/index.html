@@ -14,14 +14,21 @@
 
     <div class="jumbotron text-center">
       <h1>Mission to Mars</h1>
-      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">title text</a></p>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 
-    <!-- Mars images -->
-    <div class="row" id="craiglist-listings">
-      <div class="col-md-12">
-        <h4 class="heading">{{ listings.Mars_Facts | safe }} {{listings.NASA_Mars_News.News_Title}}</h4>
-        <small>{{listings.variable}}</small>
+    <!-- Mars Stuff -->
+    <div class="row">
+      
+      <div class="col-md-6">
+        <h4 class="heading">Latest Mars News</h4> 
+        <h5>{{mars_info.NASA_Mars_News.News_Title}}</h5> <p>{{mars_info.NASA_Mars_News.Paragraph_Text}}</p> 
+      </div>
+
+      <div class="col-md-6">
+        <small>{{ mars_info.Mars_Facts | safe }} </small>
+      </div>
+
       </div>
     </div>
 

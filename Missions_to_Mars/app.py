@@ -4,26 +4,26 @@ import scrape_mars
 
 app = Flask(__name__)
 
-# Or set inline
+# set inline
 mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
 
-# create a listings collection, lazy loading
-listings_collection = mongo.db.listings
+# create a collection, lazy loading
+mars_collection = mongo.db.mars_info
 
 @app.route("/")
 def index():
     # find one document from our mongo db and return it.
-    listings_results = listings_collection.find_one()
+    mars_results = mars_collection.find_one()
     # pass that listing to render_template
-    return render_template("index.html", listings=listings_results)
+    return render_template("index.html", mars_info=mars_results)
 
 # set our path to /scrape
 @app.route("/scrape")
 def scraper():
     # call the scrape function in our scrape_mars file. This will scrape and save to mongo.
-    listings_data = scrape_mars.scrape()
-    # update our listings with the data that is being scraped or create&insert if collection doesn't exist
-    listings_collection.update_one({}, {"$set": listings_data}, upsert=True)
+    mars_data = scrape_mars.scrape()
+    # update with the data that is being scraped or create&insert if collection doesn't exist
+    mars_collection.update_one({}, {"$set": mars_data}, upsert=True)
     # return a message to our page so we know it was successful.
     return redirect("/", code=302)
 
