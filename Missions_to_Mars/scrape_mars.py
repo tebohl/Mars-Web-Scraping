@@ -118,6 +118,12 @@ def scrape():
 
     # Quit the browser
     browser.quit()
+    #assemble dictionary
+    mars_dict = {
+                "NASA_Mars_News":{"News_Title": news_title, "Paragraph_Text": p_text},
+                "JPL_Featured_Image": featured_image_url,
+                "Mars_Facts": html_table,
+                "Mars_Hemispheres": hemisphere_image_urls,
+                }
 
-    # Return our list
-    return hemisphere_image_urls
+    return mars_dict

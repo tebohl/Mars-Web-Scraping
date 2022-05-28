@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Find a Phone</title>
+  <title>Mission to Mars</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
 
@@ -13,14 +13,14 @@
   <div class="container">
 
     <div class="jumbotron text-center">
-      <h1>Phone Shoppin'</h1>
+      <h1>Mission to Mars</h1>
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">title text</a></p>
     </div>
 
     <!-- Mars images -->
     <div class="row" id="craiglist-listings">
       <div class="col-md-12">
-        <h4 class="heading">{{listings.variable}} {{listings.variable}}</h4>
+        <h4 class="heading">{{ listings.Mars_Facts | safe }} {{listings.NASA_Mars_News.News_Title}}</h4>
         <small>{{listings.variable}}</small>
       </div>
     </div>
