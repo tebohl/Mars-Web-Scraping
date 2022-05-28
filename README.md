@@ -11,6 +11,6 @@ The final application scrapes and displays the following:
 
 Below are screenshots of the page:
 
-![1](Mission_To_Mars/screenshot1.png)
+![1](screenshot1.png)
 
-![2](Mission_To_Mars/screenshot2.png)
+![2](screenshot2.png)
