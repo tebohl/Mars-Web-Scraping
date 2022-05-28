@@ -17,11 +17,12 @@
       <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape New Data</a></p>
     </div>
 
-    <!-- Mars Stuff----------->
+    <!-- Mars Stuff---------------------------------------------->
     <div class="row">
     <!---Mars News------------>
       <div class="col-md-12">
-        <h4 class="heading">Latest Mars News</h4> 
+        <h3 class="heading">Latest Mars News</h3> 
+        <hr>
         <h5>{{mars_info.NASA_Mars_News.News_Title}}</h5>
         <p>{{mars_info.NASA_Mars_News.Paragraph_Text}}</p> 
       </div>
@@ -30,15 +31,16 @@
     <div class="row">
       <!---Mars Feature Image-->
       <div class="col-md-8"> 
-      <h4 class="heading">Featured Mars Image</h4> 
+      <h3 class="heading">Featured Mars Image</h3> 
+      <hr>
       <img src= {{mars_info.JPL_Featured_Image}} class="img-responsive">
       </div>
       <!----Mars Facts--------->
       <div class="col-md-4"> 
       <h3>Mars Facts</h3>
-      {{ mars_info.Mars_Facts | safe }}  
+      <table class= "table-responsive">{{ mars_info.Mars_Facts | safe }} </table>
       </div>
-      
+
       <!-----Mars Hemisphere thumbnails-->
       <div class = "row">
         <div class="col-md-12"> 
