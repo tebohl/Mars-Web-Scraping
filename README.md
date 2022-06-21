@@ -1,6 +1,6 @@
 # web-scraping-challenge
 
-In this assignment, I built a web application that scrapes various websites for data related to Mars and displays the information in a single HTML page. 
+I built a web application that scrapes various websites for data related to Mars and displays the information in a single HTML page. 
 
 The final application scrapes and displays the following:
 
