@@ -1,4 +1,4 @@
-# Web-scraping-challenge
+# Mars-Web-scraping
 
 I built a web application that scrapes various websites for data related to Mars and displays the information in a single HTML page. 
 
